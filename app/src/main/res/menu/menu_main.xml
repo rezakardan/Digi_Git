@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:id="@+id/homeFragment" android:icon="@drawable/home_fill" android:title="@string/home"
+        />
+    <item android:id="@+id/categoryFragment" android:icon="@drawable/category_fill" android:title="@string/category"/>
+
+    <item android:id="@+id/basketShoppingFragment" android:icon="@drawable/cart_fill" android:title="@string/basket"/>
+    <item android:id="@+id/myDigiKalaFragment" android:icon="@drawable/user_fill" android:title="@string/my_digikala"/>
+
+
+
+</menu>

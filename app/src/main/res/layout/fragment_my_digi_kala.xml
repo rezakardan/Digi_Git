@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mydigikala.MyDigiKalaFragment">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLayTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5mdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/tanzimat"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@drawable/digi_settings"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@drawable/exit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_100mdp"
+                app:layout_constraintTop_toBottomOf="@id/constLayTop"
+
+
+                >
+
+
+                <ImageView
+                    android:id="@+id/digi1"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/digi_smile"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+
+                android:id="@+id/constLayInforms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_50mdp"
+                app:layout_constraintTop_toBottomOf="@id/constLay2"
+
+
+                >
+
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5mdp"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:text="@string/loginTxt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15font_mdp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/phoneNumberEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40mdp"
+                    android:layout_marginHorizontal="@dimen/_5mdp"
+                    android:layout_marginTop="@dimen/_20mdp"
+                    android:background="@drawable/shape_search_profile"
+                    android:hint="@string/phone_and_email"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/txt"
+                    tools:ignore="TextFields" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5mdp"
+                    android:layout_marginTop="@dimen/_20mdp"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/digikala_entry"
+                    android:id="@+id/buttonNumber"
+                    android:textSize="@dimen/_20font_mdp"
+                    app:layout_constraintTop_toBottomOf="@id/phoneNumberEdt" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:layout_marginBottom="@dimen/_80mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constLayInforms">
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:backgroundTint="@color/gray"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5mdp"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout_marginBottom="@dimen/_5mdp"
+                    android:text="@string/terms_and_rules_full"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15font_mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view"
+                    app:layout_goneMarginTop="@dimen/_10mdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

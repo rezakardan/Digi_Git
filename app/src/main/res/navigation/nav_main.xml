@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
+
+
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.digikalax.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+
+
+
+
+
+    <action
+        android:id="@+id/action_favoriteProductFragment_to_homeFragment"
+        app:destination="@id/homeFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.digikalax.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.digikalax.ui.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+
+
+    </fragment>
+
+
+
+
+
+
+
+    <action
+        android:id="@+id/action_productDetailFragment_to_myDigiKalaFragment4"
+        app:destination="@id/myDigiKalaFragment" />
+
+
+
+    <action
+        android:id="@+id/action_basketShoppingFragment_to_myDigiKalaFragment"
+        app:destination="@id/myDigiKalaFragment" />
+    <fragment
+        android:id="@+id/myDigiKalaFragment"
+        android:name="com.example.digikalax.ui.mydigikala.MyDigiKalaFragment"
+        android:label="fragment_my_digi_kala"
+        tools:layout="@layout/fragment_my_digi_kala"/>
+
+    <action
+        android:id="@+id/action_myDigiKalaFragment_to_registerFragment"
+        app:destination="@id/registerFragment" />
+
+
+
+
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.digikalax.ui.mydigikala.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+
+
+        <argument
+            android:name="phonenumber"
+            app:argType="string" />
+
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_registerFragment_to_profileFragment"
+        app:destination="@id/profileFragment" />
+
+    <action
+        android:id="@+id/action_myDigiKalaFragment_to_profileFragment"
+        app:destination="@id/profileFragment" />
+
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.digikalax.ui.mydigikala.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+
+
+
+
+
+
+    </fragment>
+
+
+
+
+
+
+    <action
+        android:id="@+id/action_basketShoppingFragment_to_checkOutFragment"
+        app:destination="@id/checkOutFragment" />
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.example.digikalax.ui.checkout.CheckOutFragment"
+        android:label="fragment_check_out"
+        tools:layout="@layout/fragment_check_out" >
+
+
+
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_basketShoppingFragment_to_basketNextShoppingFragment"
+        app:destination="@id/basketNextShoppingFragment" />
+    <fragment
+        android:id="@+id/basketNextShoppingFragment"
+        android:name="com.example.digikalax.ui.basket.BasketNextShoppingFragment"
+        android:label="fragment_basket_next_shopping"
+        tools:layout="@layout/fragment_basket_next_shopping" />
+
+
+
+    <action
+        android:id="@+id/action_confirmPurchasesFragment_to_basketShoppingFragment"
+        app:destination="@id/basketShoppingFragment" />
+
+    <action
+        android:id="@+id/action_productDetailFragment_to_basketShoppingFragment"
+        app:destination="@id/basketShoppingFragment" />
+    <fragment
+        android:id="@+id/basketShoppingFragment"
+        android:name="com.example.digikalax.ui.basket.BasketShoppingFragment"
+        android:label="fragment_basket_shopping"
+        tools:layout="@layout/fragment_basket_shopping" >
+
+
+
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_homeFragment_to_productDetailFragment"
+        app:destination="@id/productDetailFragment" />
+
+    <action
+        android:id="@+id/action_favoriteProductFragment_to_productDetailFragment"
+        app:destination="@id/productDetailFragment" />
+
+
+    <action
+        android:id="@+id/action_basketShoppingFragment_to_productDetailFragment"
+        app:destination="@id/productDetailFragment" />
+
+
+
+
+
+
+
+
+    <action
+        android:id="@+id/action_productByCategoryFragment_to_productDetailFragment"
+        app:destination="@id/productDetailFragment" />
+
+
+
+    <action
+        android:id="@+id/action_productByCategoryNameFragment_to_productDetailFragment"
+        app:destination="@id/productDetailFragment" />
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.digikalax.ui.product_detail.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+
+
+
+    </fragment>
+
+
+
+
+
+    <action
+        android:id="@+id/action_checkOutFragment_to_confirmPurchasesFragment"
+        app:destination="@id/confirmPurchasesFragment" />
+    <fragment
+        android:id="@+id/confirmPurchasesFragment"
+        android:name="com.example.digikalax.ui.confirmpurchase.ConfirmPurchasesFragment"
+        android:label="fragment_confirm_purchases"
+        tools:layout="@layout/fragment_confirm_purchases" >
+        <argument
+            android:name="totalprice"
+            app:argType="string" />
+        <argument
+            android:name="productid"
+            app:argType="string" />
+
+    </fragment>
+
+
+
+
+    <action
+        android:id="@+id/action_productDetailFragment_to_productDescriptionFragment"
+        app:destination="@id/productDescriptionFragment" />
+    <fragment
+        android:id="@+id/productDescriptionFragment"
+        android:name="com.example.digikalax.ui.product_detail.ProductDescriptionFragment"
+        android:label="fragment_product_description"
+        tools:layout="@layout/fragment_product_description" >
+        <argument
+            android:name="description"
+            app:argType="string" />
+    </fragment>
+
+
+
+
+    <action
+        android:id="@+id/action_productDetailFragment_to_technicalProductFragment"
+        app:destination="@id/technicalProductFragment" />
+    <fragment
+        android:id="@+id/technicalProductFragment"
+        android:name="com.example.digikalax.ui.product_detail.TechnicalProductFragment"
+        android:label="fragment_technical_product"
+        tools:layout="@layout/fragment_technical_product" >
+        <argument
+            android:name="jsonstring"
+            app:argType="string" />
+    </fragment>
+
+
+
+
+
+   <action
+        android:id="@+id/action_productDetailFragment_to_productSetCommentFragment"
+        app:destination="@id/productSetCommentFragment" />
+    <fragment
+        android:id="@+id/productSetCommentFragment"
+        android:name="com.example.digikalax.ui.product_detail.ProductSetCommentFragment"
+        android:label="fragment_product_set_comment"
+        tools:layout="@layout/fragment_product_set_comment" >
+        <argument
+            android:name="productname"
+            app:argType="string" />
+        <argument
+            android:name="productid"
+            app:argType="string" />
+        <argument
+            android:name="imageurl"
+            app:argType="string" />
+        <argument
+            android:name="token"
+            app:argType="string" />
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_productDetailFragment_to_allProductsCommentsFragment"
+        app:destination="@id/allProductsCommentsFragment" />
+    <fragment
+        android:id="@+id/allProductsCommentsFragment"
+        android:name="com.example.digikalax.ui.product_detail.AllProductsCommentsFragment"
+        android:label="fragment_all_products_comments"
+        tools:layout="@layout/fragment_all_products_comments" >
+        <argument
+            android:name="productidd"
+            app:argType="string" />
+    </fragment>
+
+
+
+
+
+    <action
+        android:id="@+id/action_productDetailFragment_to_productPriceChartFragment"
+        app:destination="@id/productPriceChartFragment" />
+    <fragment
+        android:id="@+id/productPriceChartFragment"
+        android:name="com.example.digikalax.ui.product_detail.ProductPriceChartFragment"
+        android:label="fragment_product_price_chart"
+        tools:layout="@layout/fragment_product_price_chart" >
+        <argument android:name="price"
+            app:argType="com.example.digikalax.data.models.product_detail.ResponseGetProductById$Data[]" />
+    </fragment>
+
+
+
+
+    <action
+        android:id="@+id/action_profileFragment_to_favoriteProductFragment"
+        app:destination="@id/favoriteProductFragment" />
+    <fragment
+        android:id="@+id/favoriteProductFragment"
+        android:name="com.example.digikalax.ui.product_detail.FavoriteProductFragment"
+        android:label="fragment_favorite_product"
+        tools:layout="@layout/fragment_favorite_product" >
+
+
+
+    </fragment>
+
+
+
+
+    <action
+        android:id="@+id/action_profileFragment_to_settingFragment"
+        app:destination="@id/settingFragment" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.digikalax.ui.mydigikala.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <action
+        android:id="@+id/action_profileFragment_to_userAccountFragment"
+        app:destination="@id/userAccountFragment" />
+    <fragment
+        android:id="@+id/userAccountFragment"
+        android:name="com.example.digikalax.ui.mydigikala.UserAccountFragment"
+        android:label="fragment_user_account"
+        tools:layout="@layout/fragment_user_account" />
+
+
+
+
+    <action
+        android:id="@+id/action_profileFragment_to_userCommentsFragment"
+        app:destination="@id/userCommentsFragment" />
+
+    <fragment
+        android:id="@+id/userCommentsFragment"
+        android:name="com.example.digikalax.ui.product_detail.UserCommentsFragment"
+        android:label="fragment_user_comments"
+        tools:layout="@layout/fragment_user_comments" />
+
+    <action
+        android:id="@+id/action_addressFragment_to_addAddressFragment"
+        app:destination="@id/addAddressFragment" />
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.example.digikalax.ui.addresses.AddAddressFragment"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" >
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_profileFragment_to_addressFragment"
+        app:destination="@id/addressFragment" />
+    <fragment
+        android:id="@+id/addressFragment"
+        android:name="com.example.digikalax.ui.addresses.AddressFragment"
+        android:label="fragment_address"
+        tools:layout="@layout/fragment_address" >
+
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_profileFragment_to_canceledOrderFragment"
+        app:destination="@id/canceledOrderFragment" />
+    <fragment
+        android:id="@+id/canceledOrderFragment"
+        android:name="com.example.digikalax.ui.mydigikala.CanceledOrderFragment"
+        android:label="fragment_canceled_order"
+        tools:layout="@layout/fragment_canceled_order" />
+
+
+
+    <action
+        android:id="@+id/action_profileFragment_to_myOrdersFragment"
+        app:destination="@id/myOrdersFragment" />
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.example.digikalax.ui.mydigikala.MyOrdersFragment"
+        android:label="fragment_my_orders"
+        tools:layout="@layout/fragment_my_orders" />
+
+
+
+    <action
+        android:id="@+id/action_profileFragment_to_processingOrderFragment"
+        app:destination="@id/processingOrderFragment" />
+    <fragment
+        android:id="@+id/processingOrderFragment"
+        android:name="com.example.digikalax.ui.mydigikala.ProcessingOrderFragment"
+        android:label="fragment_processing_order"
+        tools:layout="@layout/fragment_processing_order" />
+
+
+
+
+
+    <action
+        android:id="@+id/action_profileFragment_to_returnedOrderFragment"
+        app:destination="@id/returnedOrderFragment" />
+    <fragment
+        android:id="@+id/returnedOrderFragment"
+        android:name="com.example.digikalax.ui.mydigikala.ReturnedOrderFragment"
+        android:label="fragment_returned_order"
+        tools:layout="@layout/fragment_returned_order" />
+
+
+
+
+
+    <action
+        android:id="@+id/action_profileFragment_to_unpaidOrderFragment"
+        app:destination="@id/unpaidOrderFragment" />
+    <fragment
+        android:id="@+id/unpaidOrderFragment"
+        android:name="com.example.digikalax.ui.mydigikala.UnpaidOrderFragment"
+        android:label="fragment_unpaid_order"
+        tools:layout="@layout/fragment_unpaid_order" />
+
+
+
+    <action
+        android:id="@+id/action_categoryFragment_to_productByCategoryFragment"
+        app:destination="@id/productByCategoryFragment" />
+
+
+    <action
+        android:id="@+id/action_homeFragment_to_productByCategoryFragment"
+        app:destination="@id/productByCategoryFragment" />
+    <fragment
+        android:id="@+id/productByCategoryFragment"
+        android:name="com.example.digikalax.ui.category.ProductByCategoryFragment"
+        android:label="fragment_product_by_category"
+        tools:layout="@layout/fragment_product_by_category" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+
+    </fragment>
+
+
+
+    <action
+        android:id="@+id/action_categoryFragment_to_productByCategoryNameFragment"
+        app:destination="@id/productByCategoryNameFragment" />
+    <fragment
+        android:id="@+id/productByCategoryNameFragment"
+        android:name="com.example.digikalax.ui.category.ProductByCategoryNameFragment"
+        android:label="fragment_product_by_category_name"
+        tools:layout="@layout/fragment_product_by_category_name" >
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+
+
+    </fragment>
+
+
+
+    <action
+        android:id="@+id/action_productDetailFragment_to_similarProductFragment"
+        app:destination="@id/similarProductFragment" />
+    <fragment
+        android:id="@+id/similarProductFragment"
+        android:name="com.example.digikalax.ui.product_detail.SimilarProductFragment"
+        android:label="SimilarProductFragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

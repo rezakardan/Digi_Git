@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:id="@+id/priceChartTxt" android:icon="@drawable/chart" android:title="@string/price_chart"/>
+
+
+    <item android:id="@+id/shareProductTxt" android:icon="@drawable/share" android:title="@string/share_product"/>
+
+
+
+
+
+
+
+
+
+
+</menu>

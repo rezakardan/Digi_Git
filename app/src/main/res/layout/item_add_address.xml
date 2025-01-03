@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sendAddressesItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            android:src="@drawable/location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtSendTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5mdp"
+            android:text="@string/send_to"
+
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_15font_mdp"
+            app:layout_constraintEnd_toStartOf="@id/location"
+            app:layout_constraintTop_toTopOf="@id/location" />
+
+
+        <TextView
+            android:id="@+id/postalCode"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40mdp"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:layout_marginEnd="@dimen/_5mdp"
+            android:drawableEnd="@drawable/letter"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15font_mdp"
+            app:layout_constraintEnd_toStartOf="@id/location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSendTo" />
+
+
+        <TextView
+            android:id="@+id/phoneAddress"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40mdp"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:layout_marginEnd="@dimen/_5mdp"
+            android:drawableEnd="@drawable/call"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15font_mdp"
+            app:layout_constraintEnd_toStartOf="@id/location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postalCode" />
+
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginEnd="@dimen/_5mdp"
+            android:ellipsize="end"
+            android:hint="@string/address"
+            android:maxLines="3"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_15font_mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneAddress" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

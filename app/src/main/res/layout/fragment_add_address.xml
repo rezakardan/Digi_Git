@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.addresses.AddAddressFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10mdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/ostan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:layout_marginEnd="@dimen/_5mdp"
+            android:ellipsize="end"
+            android:hint="استان "
+
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15font_mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@+id/ostan">
+
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:contentDescription="null"
+                android:gravity="bottom"
+                android:hint="  شهر یا روستا"
+                android:inputType="text"
+                android:maxLength="10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15font_mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@+id/const1">
+
+
+            <EditText
+                android:id="@+id/street"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:contentDescription="null"
+                android:gravity="bottom"
+                android:hint="کوچه یا خیابان"
+                android:maxLength="11"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15font_mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="Autofill" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@+id/const2">
+
+
+            <EditText
+                android:id="@+id/postalCode"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:contentDescription="null"
+                android:gravity="bottom"
+                android:hint="کد پستی"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15font_mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@+id/const3">
+
+
+            <EditText
+                android:id="@+id/pelak"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:contentDescription="null"
+                android:gravity="bottom"
+                android:hint="پلاک"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15font_mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@+id/const4">
+
+
+            <EditText
+                android:id="@+id/user"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:contentDescription="null"
+                android:gravity="bottom"
+                android:hint="نام و نام خانوادگی گیرنده"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15font_mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            app:layout_constraintTop_toBottomOf="@+id/const5">
+
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:contentDescription="null"
+                android:gravity="bottom"
+                android:hint="شماره موبایل گیرنده"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15font_mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30mdp"
+            android:backgroundTint="@color/red"
+            android:text="@string/add_address"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/const6" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

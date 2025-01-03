@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mydigikala.ProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLayTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5mdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/tanzimat"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@drawable/digi_settings"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@drawable/exit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userInformsLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30mdp"
+                app:layout_constraintTop_toBottomOf="@+id/constLayTop">
+
+
+                <TextView
+                    android:id="@+id/txtUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:gravity="center"
+                    android:text="@string/completion_of_user_information"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/_15font_mdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/txtPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20mdp"
+                    android:layout_marginBottom="@dimen/_5mdp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_20font_mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLay2"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/userInformsLay">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/informsLay21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10mdp"
+                    android:paddingTop="@dimen/mines5mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/view1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/img21"
+
+                        android:layout_width="@dimen/_60mdp"
+                        android:layout_height="@dimen/_60mdp"
+                        android:src="@drawable/digi_score"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10mdp"
+                        android:layout_marginEnd="@dimen/_10mdp"
+                        android:text="@string/digikala_score"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15font_mdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@id/img21"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/img21"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5mdp"
+                        android:layout_marginBottom="@dimen/_10mdp"
+
+                        app:layout_constraintBottom_toBottomOf="@id/img21"
+                        app:layout_constraintEnd_toStartOf="@id/img21"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray"
+                    android:rotation="90"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constLay22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:layout_marginBottom="@dimen/_5mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/img22"
+                        android:layout_width="@dimen/_50mdp"
+                        android:layout_height="@dimen/_50mdp"
+                        android:src="@drawable/digi_wallet"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5mdp"
+                        android:text="فعال سازی کیف پول"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15font_mdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img22" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/constLay2" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLay3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@id/view2">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constLay23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:layout_marginBottom="@dimen/_5mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintEnd_toStartOf="@+id/constLay33"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/img23"
+                        android:layout_width="@dimen/_50mdp"
+                        android:layout_height="@dimen/_50mdp"
+                        android:src="@drawable/digi_club"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5mdp"
+                        android:text="@string/club"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15font_mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img23" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constLay33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:layout_marginBottom="@dimen/_5mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/constLay23"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/img33"
+                        android:layout_width="@dimen/_50mdp"
+                        android:layout_height="@dimen/_50mdp"
+                        android:src="@drawable/digi_user"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5mdp"
+                        android:text="@string/auth"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15font_mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img33" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_5mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/constLay3" />
+
+
+            <TextView
+                android:id="@+id/myOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:layout_marginEnd="@dimen/_10mdp"
+                android:text="@string/my_orders"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_30font_mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/scrollOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:paddingTop="@dimen/_10mdp"
+                android:paddingBottom="@dimen/_10mdp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/myOrders">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/constRecy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constOrder1"
+                        android:layout_width="@dimen/_80mdp"
+                        android:layout_height="@dimen/_80mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/img31"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50mdp"
+
+
+                            android:src="@drawable/digi_unpaid"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5mdp"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:layout_marginBottom="@dimen/_5mdp"
+                            android:text="@string/unpaid"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12font_mdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img31" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constOrder2"
+                        android:layout_width="@dimen/_80mdp"
+                        android:layout_height="@dimen/_80mdp"
+                        android:layout_marginStart="@dimen/_10mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/constOrder1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/img32"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50mdp"
+
+                            android:src="@drawable/digi_processing"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5mdp"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:layout_marginBottom="@dimen/_5mdp"
+                            android:text="@string/processing"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12font_mdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img32" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constOrder3"
+                        android:layout_width="@dimen/_80mdp"
+                        android:layout_height="@dimen/_80mdp"
+                        android:layout_marginStart="@dimen/_10mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/constOrder2"
+
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/img43"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50mdp"
+
+                            android:src="@drawable/digi_delivered"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt43"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5mdp"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:layout_marginBottom="@dimen/_5mdp"
+                            android:text="@string/my_orders"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12font_mdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img43" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constOrder4"
+                        android:layout_width="@dimen/_80mdp"
+                        android:layout_height="@dimen/_80mdp"
+                        android:layout_marginStart="@dimen/_10mdp"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/constOrder3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/img34"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50mdp"
+
+                            android:src="@drawable/digi_cancel"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt34"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5mdp"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:layout_marginBottom="@dimen/_5mdp"
+                            android:text="@string/canceled"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15font_mdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img34" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constOrder5"
+                        android:layout_width="@dimen/_80mdp"
+                        android:layout_height="@dimen/_80mdp"
+                        android:layout_marginStart="@dimen/_10mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/constOrder4"
+
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/img35"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50mdp"
+
+                            android:src="@drawable/digi_returned"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt35"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5mdp"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:layout_marginBottom="@dimen/_5mdp"
+                            android:text="@string/returned"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15font_mdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img35" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </HorizontalScrollView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constImgAdaLay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/scrollOrders">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/imgAds"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120mdp"
+
+
+                    android:layout_margin="@dimen/_10mdp"
+                    app:cardCornerRadius="@dimen/_10mdp"
+
+                    app:cardElevation="@dimen/_3mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/imgSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constDigiPlusLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@+id/constImgAdaLay1">
+
+
+                <ImageView
+                    android:id="@+id/imgDigiPlus"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@drawable/digiplus"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10mdp"
+                    android:text="@string/digi_plus"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15font_mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgDigiPlus"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+
+                    android:id="@+id/imgGoToDigiPlus"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:src="@drawable/arrow_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constDigiFavorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@+id/constDigiPlusLay">
+
+
+                <ImageView
+                    android:id="@+id/imgDigiPlusFavorite"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@drawable/digi_fav_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10mdp"
+                    android:text="@string/fav_list"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15font_mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgDigiPlusFavorite"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgGoToDigiPlusFavorite"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:src="@drawable/arrow_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constDigiPlusLayNazarat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@+id/constDigiFavorite">
+
+
+                <ImageView
+                    android:id="@+id/imgDigiNazarat"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@drawable/digi_comments_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10mdp"
+                    android:text="@string/my_comments"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15font_mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgDigiNazarat"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgGoToDigiPlusNazarat"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:src="@drawable/arrow_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constDigiPlusLayAddresses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@+id/constDigiPlusLayNazarat">
+
+
+                <ImageView
+                    android:id="@+id/imgDigiPlusAddresses"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:src="@drawable/digi_adresses_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10mdp"
+                    android:text="@string/addresses"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15font_mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imgDigiPlusAddresses"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgGoToDigiPlusAddresses"
+                    android:layout_width="@dimen/_40mdp"
+                    android:layout_height="@dimen/_40mdp"
+                    android:layout_marginStart="@dimen/_10mdp"
+                    android:src="@drawable/arrow_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!-->>        <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_margin="@dimen/_10mdp"
+
+                        android:id="@+id/constDigiLayUserInformation"
+                        app:layout_constraintTop_toBottomOf="@+id/constDigiPlusLayAddresses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/imgDigiLayUserInformation"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="@dimen/_40mdp"
+                            android:layout_height="@dimen/_40mdp"
+                            android:src="@drawable/digi_profile_icon"/>
+
+
+                        <TextView
+                            android:layout_marginStart="@dimen/_10mdp"
+                            android:layout_marginEnd="@dimen/_10mdp"
+                            android:text="@string/profile_data"
+                            app:layout_constraintStart_toEndOf="@id/imgGoToDigiLayUserInformation"
+                            app:layout_constraintEnd_toStartOf="@+id/imgDigiLayUserInformation"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <ImageView
+                            android:layout_marginStart="@dimen/_10mdp"
+                            android:id="@+id/imgGoToDigiLayUserInformation"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_width="@dimen/_40mdp"
+                            android:layout_height="@dimen/_40mdp"
+                            android:src="@drawable/arrow_back"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>    <!-->>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:layout_marginBottom="@dimen/_10mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/constDigiPlusLayAddresses">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/imgAds1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120mdp"
+                    android:layout_margin="@dimen/_10mdp"
+                    android:visibility="gone"
+
+                    app:cardCornerRadius="@dimen/_10mdp"
+                    app:cardElevation="@dimen/_3mdp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/imgSlider2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

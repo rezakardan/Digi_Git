@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.product_detail.UserCommentsFragment">
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <ImageView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:rotation="180"
+            android:id="@+id/back"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"/>
+
+
+        <TextView
+            android:layout_marginEnd="@dimen/_10mdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="نظرات کاربر"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15font_mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constLayNazar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@+id/topBar"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyNazarat"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_90mdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_nazarat"
+
+
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/constEmptyLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/_200mdp"
+android:id="@+id/imgComments"
+            android:layout_height="@dimen/_200mdp"
+            android:src="@drawable/digi_comments_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:layout_marginBottom="@dimen/_10mdp"
+            android:text="کاربر گرامی شما هیچ کامنتی  قرار نداده اید "
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15font_mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgComments" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <ProgressBar
+        android:id="@+id/loading"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

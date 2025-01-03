@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_entry_user">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgEntry"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            android:src="@drawable/import_96_orenge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/txtEntry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toStartOf="@id/imgEntry"
+    app:layout_constraintTop_toTopOf="@id/imgEntry"
+    app:layout_constraintBottom_toBottomOf="@id/imgEntry"
+    android:layout_marginEnd="@dimen/_10mdp"
+    android:text="@string/login_or_register"
+    android:textSize="@dimen/_15font_mdp"
+    android:textColor="@color/black"
+    />
+
+        <ImageView
+            android:id="@+id/imgGoTo"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20mdp"
+            android:layout_marginBottom="@dimen/_15mdp"
+            android:paddingBottom="@dimen/_10mdp"
+            android:text="@string/login_or_register_msg"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12font_mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_5mdp"
+            app:layout_constraintTop_toBottomOf="@id/txtEntry" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

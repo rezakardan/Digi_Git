@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/constLayTop">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:rotation="180"
+        android:id="@+id/back"
+        android:layout_marginTop="@dimen/_20mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/_10mdp"/>
+
+
+
+    <ImageView
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:id="@+id/imgSabteNazar"
+        app:layout_constraintEnd_toStartOf="@+id/back"
+        android:layout_marginTop="@dimen/_20mdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/_10mdp"/>
+
+
+    <TextView
+        android:id="@+id/txtDidgaheShoma"
+android:layout_marginEnd="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:textSize="@dimen/_15font_mdp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:text="@string/your_comment"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/imgSabteNazar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    <TextView
+        android:id="@+id/txtProductName"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:textSize="@dimen/_15font_mdp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toStartOf="@+id/imgSabteNazar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ConstLayScore"
+        app:layout_constraintTop_toBottomOf="@+id/constLayTop"
+        android:layout_marginTop="@dimen/_10mdp">
+
+
+        <ImageView
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:src="@drawable/digi_score"
+            android:id="@+id/scoreNazar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="@dimen/_10mdp"/>
+
+
+
+
+<View
+    android:background="@color/gray"
+    app:layout_constraintEnd_toStartOf="@+id/scoreNazar"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginHorizontal="@dimen/_10mdp"
+    android:layout_width="0dp"
+    android:layout_height="1dp"/>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/hhhhhhhhhhhhhh"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/_10mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ConstLayScore" />
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@+id/hhhhhhhhhhhhhh"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <androidx.core.widget.NestedScrollView
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/txtYourComment"
+                    android:layout_width="wrap_content"
+
+android:layout_marginTop="@dimen/_10mdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10mdp"
+                    android:text="@string/say_your_comment"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_25font_mdp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    app:layout_constraintTop_toBottomOf="@+id/txtYourComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout_marginHorizontal="@dimen/_20mdp">
+
+
+
+
+
+
+                    <TextView
+                        android:textSize="@dimen/_15font_mdp"
+                        android:textColor="@color/black"
+                        android:id="@+id/txttitle"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/comment_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="@dimen/_10mdp"
+app:layout_constraintTop_toBottomOf="@+id/txttitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_5mdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusTopStart="@dimen/_5mdp">
+
+
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edttitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout_marginHorizontal="@dimen/_20mdp">
+
+
+
+
+
+
+                    <TextView
+                        android:textSize="@dimen/_15font_mdp"
+                        android:textColor="@color/black"
+                        android:id="@+id/txttitle3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="نقاط قوت"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="@dimen/_10mdp"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_5mdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusTopStart="@dimen/_5mdp">
+
+
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edttitle3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout_marginHorizontal="@dimen/_20mdp">
+
+
+
+
+
+
+                    <TextView
+                        android:textSize="@dimen/_15font_mdp"
+                        android:textColor="@color/black"
+                        android:id="@+id/txttitle4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="نقاط ضعف"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="@dimen/_10mdp"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitle4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_5mdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusTopStart="@dimen/_5mdp">
+
+
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edttitle4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout_marginHorizontal="@dimen/_20mdp">
+
+
+
+
+
+
+                    <TextView
+                        android:textSize="@dimen/_15font_mdp"
+                        android:textColor="@color/black"
+                        android:id="@+id/txttitle5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="متن نظر"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="@dimen/_10mdp"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_5mdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusTopStart="@dimen/_5mdp">
+
+
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edttitle5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    android:layout_marginHorizontal="@dimen/_20mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/_80mdp">
+
+
+
+
+
+
+                    <TextView
+                        android:textSize="@dimen/_15font_mdp"
+                        android:textColor="@color/black"
+                        android:id="@+id/txttitle6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="@string/comment_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="@dimen/_10mdp"
+                        app:layout_constraintTop_toBottomOf="@+id/txttitle6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        app:boxCornerRadiusBottomEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusBottomStart="@dimen/_5mdp"
+                        app:boxCornerRadiusTopEnd="@dimen/_5mdp"
+                        app:boxCornerRadiusTopStart="@dimen/_5mdp">
+
+
+
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edttitle6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

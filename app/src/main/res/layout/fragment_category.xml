@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.category.CategoryFragment">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="null"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consttt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5mdp">
+
+
+            <EditText
+                android:id="@+id/searchEdt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_38mdp"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:background="@drawable/shape_search"
+                android:drawableEnd="@drawable/magnifying_glass"
+                android:drawablePadding="@dimen/_10mdp"
+                android:hint="@string/digiKala"
+android:visibility="gone"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_10mdp"
+                android:singleLine="true"
+                android:textColor="@color/red"
+                android:textColorHint="@color/red"
+                android:textSize="@dimen/_10font_mdp"
+                app:drawableTint="@color/red"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/searchEdt"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/constTools">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/industrial_tools_and_equipment"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnIndustrial_tools_and_equipment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+                
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyTools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/constTools"
+    tools:listitem="@layout/itemcategories"/>
+
+
+
+
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recyTools"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consDigital">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/digital_goods"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnDigital_goods"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consDigital"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recyDigital"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recyDigital"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consMobile">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/mobile"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnMobile"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/consMobile"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recyMobile"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recyMobile"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consToy">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/toys_children_and_babies"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnToys_children_and_babies"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_all"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_15font_mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consToy"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recyToy"
+                />
+
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recyToy"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consSport">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/sports_and_travel"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnSports_and_travel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consSport"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recySport"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recySport"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consHome">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/home_and_kitchen"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnHome_and_kitchen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consHome"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recyHome"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recyHome"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consBook">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/books_and_stationery"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnBooks_and_stationery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consBook"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recyBook"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recyBook"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consBeauty">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/beauty_and_health"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnBeauty_and_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consBeauty"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recyBeauty"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recyBeauty"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consNative">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/native_and_local_products"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnNative_and_local_products"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consNative"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recyNative"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recyNative"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/consSuperMarkets">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/supermarket_product"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnSupermarket_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/consSuperMarkets"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recySuperMarkets"
+                />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recySuperMarkets"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginHorizontal="@dimen/_5mdp"
+
+                android:id="@+id/constFashion">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/fashion_and_clothing"
+                    android:textSize="@dimen/_20font_mdp"
+                    android:textColor="@color/black"/>
+
+
+                <TextView
+                    android:id="@+id/btnFashion_and_clothing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/see_all"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textColor="@color/blue"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/constFashion"
+                tools:listitem="@layout/itemcategories"
+                android:id="@+id/recyFashion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_10mdp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nestedScrollView"
+        app:layout_constraintStart_toStartOf="@+id/nestedScrollView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

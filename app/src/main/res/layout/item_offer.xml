@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemoffers"
+    android:layout_width="@dimen/_160mdp"
+android:background="@color/red"
+
+    android:layout_height="@dimen/_380mdp"
+    android:layout_marginTop="@dimen/_10mdp"
+    >
+
+
+    <ImageView
+        android:id="@+id/imgAmazing"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80mdp"
+        android:layout_marginTop="@dimen/_46mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+        android:src="@drawable/amazings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/box"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_117mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:layout_marginEnd="@dimen/_10mdp"
+
+        android:src="@drawable/box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAmazing"
+
+
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/_46mdp"
+        android:layout_marginTop="@dimen/_37mdp"
+        android:layout_marginEnd="@dimen/_15mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/box">
+
+
+        <TextView
+            android:padding="@dimen/_5mdp"
+            android:id="@+id/txtSeeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/see_all"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20mdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10mdp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtSeeAll"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
